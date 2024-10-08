@@ -74,12 +74,19 @@ st.markdown(
     """
     Let us know what we can improve about the chatbot here: 
     [Feedback Form](https://forms.gle/tKQ4QMYBfe4jEgGq7)
+
 """
 )
 st.sidebar.header("Chat with Workshop")
 
 # Get Groq API key from user
 groq_api_key = st.text_input("Enter your Groq API key:", type="password")
+
+st.markdown(
+    """
+    Get groq api key here: [Groq - Login required](https://console.groq.com/keys)
+"""
+)
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
